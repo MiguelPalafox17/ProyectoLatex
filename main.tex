@@ -1,0 +1,48 @@
+\documentclass{article}
+\input{configuracion}
+
+\title{Capitulo 5} 
+\author{Estrada Aguayo Emmanuel Roberto y alumnos de 3-4}
+\date{28 de Agosto de 2025 }
+
+
+
+\begin{document}
+\sloppy
+\maketitle
+\begin{justifying}
+    \noindent Hasta ahora no hemos abordado el cambio. Pero, si creemos en la ciencia,
+    debemos defender el postulado ontologico de que todo esta en constante cambio. De hecho, 
+    las ciencias describen, explican, precide, controlan o provocan cambios de diversos tipos, composición
+    el movimiento, la creacion, la division y la evolucion. Por lo tanto, la ontologia deberia analizar y 
+    sistematizar estos diversos tipos de cambio.
+\end{justifying}
+
+\begin{tikzpicture}
+  \path[mindmap,concept color=black,text=white]
+    node[concept] {Palafoxin Science }
+    [clockwise from=0]
+    child[concept color=green!50!black] {
+      node[concept] {practical}
+      [clockwise from=90]
+      child { node[concept] {algorithms} }
+      child { node[concept] {data structures} }
+      child { node[concept] {pro\-gramming languages} }
+      child { node[concept] {software engineer\-ing} }
+    }  
+    child[concept color=blue] {
+      node[concept] {applied}
+      [clockwise from=-30]
+      child { node[concept] {databases} }
+      child { node[concept] {WWW} }
+    }
+    child[concept color=red] { node[concept] {technical} }
+    child[concept color=orange] { node[concept] {theoretical} };
+\end{tikzpicture}
+
+\include{contenido}
+
+\printbibliography
+
+
+\end{document}
