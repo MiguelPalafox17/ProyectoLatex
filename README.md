@@ -1,9 +1,11 @@
 ﻿# ProyectoLatex
 
 <!-- 
-Palafox 215-225, 266-267
-Isacc 226-235, 268-269
-Miguel 236-245, 270, 271
-Jorgito 246-255, 272, 273
-Esau 256-265, 274, 275 
+Palafox 215-225
+Isacc 226-235
+Miguel 236-245
+Jorgito 246-255
+Esau 256-265
+Pacheco 266, 275
 -->
+
