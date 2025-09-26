@@ -4,6 +4,8 @@
 \usepackage{ragged2e}
 \usepackage[none]{hyphenat}
 
+\usepackage{newtxtext, newtxmath}
+
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[backend=biber]{biblatex}
@@ -19,5 +21,13 @@
 \usepackage{pgfplots}
 \pgfplotsset{width=10cm,compat=newest}
 
-\usepackage[papersize={216mm,271mm},tmargin=20mm,bmargin=20mm,
-lmargin=20mm,rmargin=20mm]{geometry}
+\usepackage[
+paperwidth=6in,
+  paperheight=9in,
+  % Márgenes ajustados para la nueva página más pequeña
+  top=0.75in,
+  bottom=0.75in,
+  left=0.85in,
+  right=0.6in,
+  headheight=13.6pt % Espacio para el encabezado
+]{geometry}
