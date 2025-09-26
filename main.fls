@@ -4,10 +4,10 @@ INPUT c:\Users\HP\Documents\Inteligencia Artificial\Proyecto Latex\main.tex
 OUTPUT main.log
 INPUT C:\Users\HP\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\HP\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
-INPUT C:\Users\HP\AppData\Local\Programs\MiKTeX\tex\latex\base\size12.clo
-INPUT C:\Users\HP\AppData\Local\Programs\MiKTeX\tex\latex\base\size12.clo
-INPUT C:\Users\HP\AppData\Local\Programs\MiKTeX\tex\latex\base\size12.clo
-INPUT C:\Users\HP\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\HP\AppData\Local\Programs\MiKTeX\tex\latex\base\size11.clo
+INPUT C:\Users\HP\AppData\Local\Programs\MiKTeX\tex\latex\base\size11.clo
+INPUT C:\Users\HP\AppData\Local\Programs\MiKTeX\tex\latex\base\size11.clo
+INPUT C:\Users\HP\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT .\configuracion.tex
 INPUT .\configuracion.tex
 INPUT configuracion.tex
