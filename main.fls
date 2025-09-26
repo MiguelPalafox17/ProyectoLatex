@@ -438,6 +438,13 @@ OUTPUT Contenido-Isaac.aux
 INPUT .\Contenido-Isaac.tex
 INPUT .\Contenido-Isaac.tex
 INPUT Contenido-Isaac.tex
+INPUT .\img\grafico.png
+INPUT .\img\grafico.png
+INPUT .\img\grafico.png
+INPUT .\img\grafico.png
+INPUT .\img\grafico.png
+INPUT .\img\grafico.png
+INPUT .\img\grafico.png
 INPUT .\Contenido-Miguel.tex
 INPUT .\Contenido-Miguel.tex
 OUTPUT Contenido-Miguel.aux

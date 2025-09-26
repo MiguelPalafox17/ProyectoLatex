@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 0 "main.bcf" "main.bbl" "main" 1758898705.04174 -1
-  "main.bcf" 1758898704 108539 c813693cddc2fb8bf6bd481f4946c931 "pdflatex"
+["biber main"] 0 "main.bcf" "main.bbl" "main" 1758904772.94178 -1
+  "main.bcf" 1758904772 108539 c813693cddc2fb8bf6bd481f4946c931 "pdflatex"
   "referencias.bib" 1757088899 447 0e88d52f23af420d58b032fa47b831e8 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1758898702.00761 "c:/Users/HP/Documents/Inteligencia Artificial/Proyecto Latex/main.tex" "main.pdf" "main" 1758898705.04263 0
+["pdflatex"] 1758904769.71998 "c:/Users/HP/Documents/Inteligencia Artificial/Proyecto Latex/main.tex" "main.pdf" "main" 1758904772.94359 0
   "C:/Users/HP/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1758867455 211565 283b973d642fb71005e35fcef66d8433 ""
   "C:/Users/HP/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1757050040 13255890 1083dc61ffb44a1cef0e8cd65ec614de ""
   "C:/Users/HP/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/ebgaramond/ebg_qn2lct.enc" 1679250124 2945 f4c9aa1a657d71d9b432a32e633f5416 ""
@@ -239,24 +239,25 @@
   "C:/Users/HP/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/HP/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/HP/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "Contenido-Astorga.aux" 1758898704 3727 29a3e9890d583efebec8379659383117 "pdflatex"
+  "Contenido-Astorga.aux" 1758904772 3727 29a3e9890d583efebec8379659383117 "pdflatex"
   "Contenido-Astorga.tex" 1758898679 49 e8b87e4df8ff5457ffe1381b23b3f196 ""
-  "Contenido-Esau.aux" 1758898704 3724 46bdd332a4d1c62c331eb7463a79a827 "pdflatex"
+  "Contenido-Esau.aux" 1758904772 3724 46bdd332a4d1c62c331eb7463a79a827 "pdflatex"
   "Contenido-Esau.tex" 1758898678 46 9d8932811f6dacdc03f4a90e6c5b94b7 ""
-  "Contenido-Isaac.aux" 1758898704 3725 f6e96e5b28f7853053f755b8b0ec2151 "pdflatex"
-  "Contenido-Isaac.tex" 1758898679 47 c24f20ff51025d4f1b0f0c1cdc357c90 ""
-  "Contenido-Miguel.aux" 1758898704 3726 e32a21fa50fbcd7f4d0366cfe60b89b5 "pdflatex"
+  "Contenido-Isaac.aux" 1758904772 3725 f6e96e5b28f7853053f755b8b0ec2151 "pdflatex"
+  "Contenido-Isaac.tex" 1758904768 571 49fb04f0602f2f2dc5017be04772a20b ""
+  "Contenido-Miguel.aux" 1758904772 3726 e32a21fa50fbcd7f4d0366cfe60b89b5 "pdflatex"
   "Contenido-Miguel.tex" 1758898701 48 3b02e6161891fcd2f5c5cb1161abacc9 ""
-  "Contenido-Pacheco.aux" 1758898704 3727 409ad6589d9ec050c65563cbd1e881ac "pdflatex"
+  "Contenido-Pacheco.aux" 1758904772 3727 409ad6589d9ec050c65563cbd1e881ac "pdflatex"
   "Contenido-Pacheco.tex" 1758898372 49 bd22ec73198ddbe6b79d955f9c55a5fd ""
-  "Contenido-Palafox.aux" 1758898704 3727 1e69db1e662b53797cb6a693701d4d0a "pdflatex"
+  "Contenido-Palafox.aux" 1758904772 3727 1e69db1e662b53797cb6a693701d4d0a "pdflatex"
   "Contenido-Palafox.tex" 1758837834 49 ed03c2c2cd9eba93f9a59073df60f832 ""
-  "c:/Users/HP/Documents/Inteligencia Artificial/Proyecto Latex/main.tex" 1758898619 895 58390abfb34fdb143c17fc2d882e6949 ""
+  "c:/Users/HP/Documents/Inteligencia Artificial/Proyecto Latex/main.tex" 1758904234 893 ba005ba3ff83b07fe5101372dadd5e09 ""
   "configuracion.tex" 1758867440 637 b259a5e04bc737f1de6cf20c93d9a27f ""
-  "main.aux" 1758898704 528 3607d5142ea8086ad65171c4246c752c "pdflatex"
+  "img/grafico.png" 1758904681 193558 559b7fb0e133127680937af0aea64720 ""
+  "main.aux" 1758904772 528 3607d5142ea8086ad65171c4246c752c "pdflatex"
   "main.bbl" 1758837839 486 76d65a242ec496c9b4361af646ff12cb "biber main"
-  "main.run.xml" 1758898704 2306 21b6f2342482d65f7bca9ce329356541 "pdflatex"
-  "main.tex" 1758898619 895 58390abfb34fdb143c17fc2d882e6949 ""
+  "main.run.xml" 1758904772 2306 21b6f2342482d65f7bca9ce329356541 "pdflatex"
+  "main.tex" 1758904234 893 ba005ba3ff83b07fe5101372dadd5e09 ""
   (generated)
   "Contenido-Astorga.aux"
   "Contenido-Esau.aux"

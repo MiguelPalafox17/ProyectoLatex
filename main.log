@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.4)  26 SEP 2025 07:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.4)  26 SEP 2025 09:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -958,13 +958,19 @@ LaTeX Warning: No \author given.
 ]
 \openout2 = `Contenido-Isaac.aux'.
 
- (Contenido-Isaac.tex)
+ (Contenido-Isaac.tex
+<img/grafico.png, id=12, 19.78821pt x 18.50723pt>
+File: img/grafico.png Graphic file (type png)
+<use img/grafico.png>
+Package pdftex.def Info: img/grafico.png  used on input line 2.
+(pdftex.def)             Requested size: 273.17856pt x 255.58342pt.
+)
 
 [3
 
 
 
-]
+ <./img/grafico.png>]
 \openout2 = `Contenido-Miguel.aux'.
 
  (Contenido-Miguel.tex)
@@ -1002,7 +1008,7 @@ LaTeX Warning: No \author given.
 
 ]
 
-LaTeX Warning: Empty bibliography on input line 37.
+LaTeX Warning: Empty bibliography on input line 35.
 
 (main.aux
 LaTeX Info: Redefining \sptext on input line 9.
@@ -1018,17 +1024,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54664 strings out of 468133
- 1443563 string characters out of 5432165
- 2637294 words of memory out of 5000000
- 82613 multiletter control sequences out of 15000+600000
+ 54671 strings out of 468133
+ 1443716 string characters out of 5432165
+ 2637295 words of memory out of 5000000
+ 82620 multiletter control sequences out of 15000+600000
  633775 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  93i,6n,95p,827b,1816s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/HP/AppData/Local/Programs/MiKTeX/fonts/type1/public/ebgaramond/EBGaramond-Regular.pfb>
-Output written on main.pdf (7 pages, 28897 bytes).
+Output written on main.pdf (7 pages, 176723 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
+ 38 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
