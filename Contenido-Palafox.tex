@@ -67,13 +67,48 @@
     Demasiado para un trasfondo intuitivo.
 
     \subsection{Capacidad de cambio}
-    Antes de abordar el cambio real, conviene aclarar la noción intuitiva
+    \noindent Antes de abordar el cambio real, conviene aclarar la noción intuitiva
     de mutabilidad o variabilidad:
 
-    \begin{quote}
-    	\textit{Una cosa es mutable o variable si puede cambiar de estado, es decir,
-    	pasar de un estado a otro.}
-    \end{quote}
-    
+    \bigskip
+
+    \noindent DEFINICIÓN 5.1: Sea x una cosa. Entonces
+    \begin{enumerate}[label=(\roman*)]
+        \item $x$ es inmutable si y solo si $S_\mathrm{L}(x)$ es un singleton para todas las elecciones de función de estado para $x$.
+        \item $x$ es cambiante (o mutable) si y solo si $S_\mathrm{L}(x)$ tiene al menos dos miembros distintos
+            para todas las elecciones de función de estado para $x$.
+    \end{enumerate}
+
+    \bigskip
+
+    \noindent POSTULADO 5.1 Toda cosa (concreta) tiene al menos dos estados distintos y 
+    el espacio de estados de cualquier construcción está vacío. Es decir:
+    \begin{enumerate}[label=(\roman*)]
+        \item si $x$ es una cosa, entonces, para todas las elecciones de la función de estado para $x$, $|S_\mathrm{L}(x)| \geq 2$.
+        \item si y es una construcción, entonces no hay funciones de estado para $y$, $o$, equivalentemente, $S_\mathrm{L}(y) = \varnothing$.
+    \end{enumerate}
+
+    Una consecuencia inmediata del Postulado 5.1 y la Definición 5.1 es
+
+    \bigskip
+
+    \noindent COROLARIO 5.1 Todas las cosas (concretas) son cambiantes, y las construcciones
+    no son ni inmutables ni cambiantes.
+
+    Observación 1. No estamos afirmando (todavía) que todo esté realmente
+    sufriendo algún tipo de cambio, sino solo que puede cambiar. Observación
+    2. La segunda parte del Corolario 5.1 afirma que las categorías de cambio
+    e inmutabilidad no se aplican a los constructos. Los constructos no son ni
+    objetos eternos (Platón) ni cambiantes (Hegel). Lo que cambia
+    de una persona a otra son los procesos cerebrales que se producen cuando se piensan los constructos.
+
+    Nuestro siguiente concepto es el del cambio global, independientemente del orden en que se produzca:
+
+    \bigskip
+
+    \noindent DEFINICIÓN 5.2 Sea $S_\mathrm{L}(x)$ un espacio de estados legítimo de una cosa $x$, y sean $S_\mathrm{i}(x)$, 
+    $S_\mathrm{j}(x) \subset S_\mathrm{L}(x)$ dos colecciones de estados de $x$ [por ejemplo, dos regiones de
+    $S_\mathrm{L}(x)$]. Entonces, el cambio global de $x$ entre $S_\mathrm{i}(x)$ y$S_\mathrm{i}(x)$ es igual a la
+    diferencia simétrica entre los subconjuntos dados:
 
 \end{justifying}
