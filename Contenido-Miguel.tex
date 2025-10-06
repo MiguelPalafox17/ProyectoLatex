@@ -1,4 +1,268 @@
 \begin{justifying}
-    Miguel 
-    Palafox
+    Nuestra nueva definición de orden de eventos es más completa 
+    que la Definición 5.7, ya que incluye el caso particular cuando $e$ 
+    se compone con $e'$ para formar un tercer evento $e'' = e * e'$ (en cuyo caso 
+    $s' = s''$), así como el caso en que no se componen. (Véase la Figura 5.8.) La 
+    composición de eventos solo es posible si la precedencia es apropiada:
+    $e * e' = e''$ si y solo si $s' = s''$ y $e < e'$.
+
+    \begin{center}
+        \includegraphics[width=0.6\textwidth]{img/Figura5-8.png}
+        \\ \scriptsize Fig. 5.8. Orden de eventos. (a) $e < e'$ y 
+        ambos se componen para formar $e''$. (b) $e < e'$ pero no se componen.
+    \end{center}
+
+    \noindent En consecuencia, dos eventos no se componen si ninguno precede al otro.
+    Lo cual es bastante obvio, ya que se supone que los eslabones de una cadena 
+    de eventos se suceden. Esto, a su vez, invita a definir una cadena de eventos 
+    como un conjunto numerable y estrictamente parcialmente ordenado de eventos $E^*(x)$ 
+    incluidos en el espacio de eventos de un evento $x$ tal que, para cualquier $e, e' \in E^*(x)$, 
+    si $e < e'$, entonces el estado final de $e$ coincide con el estado inicial de $e'$, de modo que 
+    ambos eventos se componen. Más sobre esto en la sección 3.1.
+
+    Finalmente, procederemos a formalizar la noción de una colección variable, es decir, una cuya pertenencia 
+    cambia a medida que los estados de referencia se suceden, por ejemplo, la población de una ciudad. Obviamente, 
+    el concepto de conjunto no es válido, ya que cada conjunto tiene una pertenencia fija. Pero en lugar de usar un 
+    solo conjunto, podemos emplear una familia de conjuntos indexados por un parámetro de cambio, llamémoslo $t$. 
+    Así, llamando $C_t$ a una colección en $t$, formamos la familia $C=\{C_t | t \in \Omega\}$, que puede llamarse 
+    una colección variable. O, equivalentemente, podemos proponer
+
+    \bigskip
+
+    \noindent DEFINICIÓN 5.13 Sea $t \in S(f)$ el parámetro de cambio del marco $f$. Entonces cualquier función
+    \begin{center}
+        $K: S(f) \to C$, con $C=\{C_t | t \in S(f)\}$,
+    \end{center}
+    tal que $K(t) = C_t$, para $t \in S(f)$, se llama una \textit{colección variable}.
+
+    \newpage
+
+    Esta interpretación de una colección variable será adoptada de aquí en adelante, particularmente en el Vol. 4 de 
+    este tratado, al tratar con poblaciones de moléculas, organismos o personas, cuya composición, a diferencia de la 
+    de un conjunto, cambia en el tiempo. Es particularmente ventajoso para analizar propiedades de colecciones. Tómese, 
+    por ejemplo, la numerosidad o población de una colección variable como un ecosistema. Puede ser considerada como una
+    función $p: C \to \mathbb{N}$ que asigna a cada miembro de la familia $C$ un número natural $n \in \mathbb{N}$. Esta 
+    función se compone con $K$ para producir la función $f = p \circ K: S(f) \to \mathbb{N}$, la cual asigna a cada estado 
+    de referencia (o instante) $t \in S(f)$ un número natural, a saber, la población de la colección variable. (Para tiempos 
+    discretos, la teoría matemática de conjuntos a través del tiempo está disponible.)
+
+    \subsection{\textit {Tasa, Alcance y Potencial de Cambio}}
+
+    \noindent Una primera noción que queremos aclarar es la de tasa de cambio. En realidad, existe una gran familia de conceptos 
+    de tasa de cambio, de los cuales presentaremos solo los dos más comunes.
+
+    Supongamos que tanto los estados de referencia como los estados de la cosa han sido debidamente coordinados (Secc. 2.5). Cada 
+    estado de referencia $t \in S(f)$ es entonces representado por un cuádruple de números reales: $t = (\alpha, \beta, \gamma, \delta)$. 
+    En consecuencia, el estado de la cosa correspondiente es $s = \mathbb{F}(t) = \mathbb{F}(\alpha, \beta, \gamma, \delta)$. Si $\mathbb{F}$ 
+    tiene un componente $F_i$ que es una vez derivable con respecto a uno de los cuatro parámetros de referencia, digamos $\alpha$, entonces 
+    la tasa de cambio de $F_i$ con respecto a $\alpha$ es la derivada parcial de $F_i$ con respecto a $\alpha$. La cosa no cambia en absoluto 
+    en el $i$-ésimo aspecto sobre el intervalo $[\alpha_1, \alpha_2]$ si y solo si $\partial F_i/\partial \alpha = 0$ para todo $\alpha \in [\alpha_1, \alpha_2]$. 
+    Cambia rápidamente en el mismo aspecto sobre el mismo intervalo si la tasa de cambio correspondiente es apreciable con relación a la 
+    propia $F_i$; de lo contrario, cambia lentamente. No hace falta decir que el parámetro de referencia puede ser, pero no necesariamente 
+    tiene que ser, el tiempo. En resumen, podemos establecer:
+
+    DEFINICIÓN 5.14 Sean los estados de una cosa $x$ coordinados a través de los de un cierto marco de referencia, de modo que cada estado de la cosa es de la forma $s=\mathbb{F}(\alpha, \beta, \gamma, \delta)$, donde los argumentos son los parámetros que identifican los estados de referencia. Además, sea el $i$-ésimo componente de $\mathbb{F}$ derivable con respecto a $\alpha$. Entonces
+    \begin{itemize}
+        \item[(i)] la \textit{tasa de cambio relativa} de $x$ en el $i$-ésimo aspecto y con respecto a $\alpha$ es
+            \[
+                V_i = \frac{1}{F_i} \frac{\partial F_i}{\partial \alpha}.
+            \]    
+        \item[(ii)] \textit{la magnitud relativa del cambio} de $x$ en el aspecto i-ésimo, con respecto a a y en el intervalo , es
+        \begin{center}
+            $
+                \Delta_i(\alpha_1, \alpha_2) = \frac{\ln F_i(\alpha_2) - \ln F_i(\alpha_1)}{\alpha_2 - \alpha_1}
+                \text{proporcionado } F_i(\alpha_1), F_i(\alpha_2) > 0.
+            $
+        \end{center} 
+    \end{itemize}
+
+    Si la cosa cambia periódicamente con un periodo [$a_1$,$a_2$], la magnitud de su
+    cambio a lo largo de un múltiplo entero del periodo es nula. Esto proporciona una
+    definición del concepto de \textit{cambio cíclico}.
+
+    La definición anterior no sirve en el caso de un espacio de estados probabilísticos 
+    cuyos puntos no están emparejados con ningún marco de referencia. En este caso, nos interesan 
+    los cambios globales que son invariables con respecto al marco. La tasa de cambio del estado $s_i$ 
+    al estado $s_j$ puede considerarse como la probabilidad condicional de $s_j$ dado que $s_i$ se ha actualizado, 
+    es decir, $Pr(s_j|s_i)$. El razonamiento detrás de esta elección es el siguiente. Pensemos en un objeto 
+    complejo, cuyos $n_i$ componentes se encuentran en el estado $s_i$, $n_j$ en el estado $s_j$, y así sucesivamente. 
+    Entonces, $niPr(s_j|s_i)$ medirá el número más probable de componentes que saltan del estado $s_i$ al estado $s_j$. 
+    Cuanto mayor sea este producto, mayor será la tasa de cambio. La matriz estocástica $\lVert Q_{ij} \rVert = \lVert Pr(s_j|s_i) \rVert$
+    representa entonces la tasa global de cambio de la cosa. Si la matriz es diagonal, es decir, si $Pr(s_j|s_i) = \delta _{ij}p_i$, 
+    donde $\delta _{ij}$ es el delta de Kronecker y $p_i$ la probabilidad del estado $s_i$, entonces la cosa no cambia. Cuanto mayor es 
+    el cambio, mayores son los términos fuera de la diagonal correspondientes de $\lVert Q_{ij} \rVert$. Y la magnitud del 
+    cambio, también llamada \textit{movilidad}, es igual a la suma de los productos de los términos fuera de la diagonal 
+    por sus contrapartes simétricas. Comprimimos todo esto en
+
+    \noindent DEFINICIÓN 5.15 Sea $\langle S(x), Pr \rangle$, donde $S(x)$ es un espacio de estados numerable
+    para una cosa $x$, y $Pr$ una medida de probabilidad en $S(x)$, un campo de posibilidades
+    para $x$. Entonces 
+    \begin{itemize}
+        \item[(i)] la \textit{tasa global de cambio} de $x$ es la matriz estocástica
+        \[
+            \lVert Q_{ij}\rVert=\lVert Pr(s_j|s_i)\rVert \quad \text{con} \quad s_i,s_j\in S(x),
+        \]
+    \end{itemize}
+    donde $Pr(s_j|s_i)$ es la probabilidad del estado $s_j$ dado que el estado $s_i$ se ha
+    actualizado;
+    \begin{itemize}   
+        \item[(ii)] el \textit{grado de cambio (o movilidad)} de $x$ es
+        \scriptsize
+        \[
+            \Delta = \sum_{i \ne j} Q_{ij} \cdot Q_{ji} = \sum_{i \ne j} Pr(s_j|s_i) \cdot Pr(s_i|s_j).
+        \]
+    \end{itemize} 
+
+    Esta última es una medida de la variabilidad de ciertas cosas en ciertos aspectos, concretamente aquellas que pueden describirse con la 
+    ayuda de campos de posibilidades enumerables. Pero no es una medida de la variabilidad global de una cosa arbitraria. ¿Qué tan cambiante 
+    (en todos los aspectos) es una cosa arbitraria? De manera equivalente: ¿qué tan grandes son los espacios de eventos? Para responder a esta 
+    pregunta (imprecisa), consideremos el conjunto de todas las propiedades de cualquier cosa real y un modelo teórico realista de dicha cosa, 
+    por ejemplo, la teoría relativista del electrón o del campo gravitacional. Dicho modelo, o esquema funcional, se basa en un determinado conjunto 
+    en el que se define una función de estado $\mathbb{F}$ de $n$ componentes, cada uno de los cuales representa una propiedad (cambiable) de la cosa. Al menos 
+    algunos de los componentes de la función de estado están obligados a ser continuos con respecto a algunas de las "variables independientes". 
+    Llamemos $\mathbb{F}$ a cualquier variable de estado continua de este tipo. A medida que la cosa cambia, los valores de $\mathbb{F}$ varían continuamente (o al menos de 
+    forma continua por tramos), incluso si los de algunos otros componentes de $\mathbb{F}$ cambian por saltos. (Pensemos en una cosa que gana o pierde cuantos 
+    de carga eléctrica, o en personas que ganan o pierden impulso). Véase la figura 5.9. Es evidente que el espacio (de estado) abarcado por $\mathbb{F}$ es innumerable.
+
+    \begin{center}
+        \includegraphics[width=0.4\textwidth]{img/Figura5-9.png}
+        \\ \scriptsize Fig. 5.9. Un espacio de estados con un eje continuo ($F_1$) y otro discontinuo ($F_2$). La
+        línea discontinua representa la evolución de la cosa. La totalidad de los estados es innumerable.
+    \end{center}
+
+    Suponemos que cada cosa tiene al menos una propiedad que cambia continuamente con respecto a una variable u otra, siendo la "variable independiente" normalmente una coordenada temporal o una coordenada espacial:
+    
+    \bigskip
+    \noindent POSTULADO 5.2 Toda función de estado [realista] tiene al menos un componente continuo.
+
+    \bigskip
+    Dado que un espacio de estados es el conjunto de puntos explorados por la punta de la función de estado, tenemos que
+    
+    \bigskip
+    \noindent COROLARIO 5.7 Todo espacio de estados [realista] es innumerable. Y a partir de la forma en que se construyen los eventos, también inferimos que
+
+    \bigskip
+    \noindent COROLARIO 5.8 Todo espacio de sucesos [realista] es innumerable.
+
+    Es cierto que a menudo construimos modelos de cosas (objetos modelo) cuyos espacios de estados son numerables o incluso finitos. Pero esto se hace por conveniencia 
+    más que por verdad, es decir, porque solo nos interesan algunos aspectos del conjunto. Por lo tanto, aunque la teoría de autómatas modela ciertas máquinas como si 
+    tuvieran solo un número finito de estados, el diseño y la construcción reales de dichas máquinas presuponen teorías que implican espacios de estados no numerables, 
+    como los analizados en el capítulo 3, secciones 2.4 y 2.5. Incluso si el universo consistiera solo en dos cosas en movimiento relativo (por ejemplo, una molécula diatómica), 
+    el espacio de eventos del mundo sería no numerable. En conclusión, los espacios de eventos realistas son tan grandes como cualquier subconjunto de la recta real: 
+    todos tienen el poder del continuo.
+
+    Dado que todos los espacios de eventos realistas son igualmente voluminosos (Corolario 5.8), no proporcionan una medida adecuada del potencial de cambio de las cosas reales. 
+    Debemos buscar esa medida en otra parte. Si examinamos las ciencias empíricas en busca de una propiedad que compartan todas las cosas, independientemente de su tipo y relacionada 
+    con su capacidad de cambio, solo encontramos una propiedad universal: la energía. Además, la energía tiene la propiedad de que cuanto más compleja es la cosa, mayor es su potencial de 
+    cambio. De hecho, la energía es estrictamente aditiva para las cosas que no interactúan, es decir, cuando el espacio de estados total del compuesto es igual a la unión de los espacios de 
+    estados parciales (recuerde el capítulo 3, sección 2.7). Por lo tanto, hacemos
+
+    \noindent POSTULADO 5.3 Existe exactamente una propiedad que poseen todas las cosas, la cual es aditiva para los agregados de cosas compuestas por partes separadas. Es decir, 
+    si $\Theta$ es la clase de las cosas y $F$ la de los marcos de referencia, entonces existe una y solo una función de valor real $\varepsilon: \Theta \times F \to \mathbb{R}$ 
+    tal que, para cualquier $x$ e $y$ en $\Theta$ tal que $x|y$,
+    \[
+        \varepsilon(x+y,f) = \varepsilon(x,f) + \varepsilon(y,f) \quad \text{para todo } f \in F.
+    \]
+
+    \noindent Esta función $\varepsilon$ se denomina \textit{energía}, y su valor en $(x, f)$ —es decir, \textit{la energía de x con respecto a f}— mide la \textit{variabilidad de x con respecto a f}.
+
+    (La \textit{energeia} era un concepto ontológico antes de ser absorbido y transformado por la física moderna. A veces todavía se considera una noción metafísica, aunque por razones erróneas, concretamente 
+    porque no representa una propiedad perceptible. El concepto general de energía es una noción ontológica genuina por una razón diferente, concretamente porque designa una propiedad universal. Por esta razón, 
+    aparece en todas partes en la ciencia, aunque en algunas áreas, en particular la geografía y la historia, solo ha entrado recientemente. En cualquier caso, es agradable ver que el concepto de energía vuelve 
+    al ámbito filosófico. Como ahora entendemos que la energía es una propiedad de las cosas, no hay peligro de que se reifique, y mucho menos de que se convierta en lo único existente, como hicieron los energistas 
+    de principios de siglo, por ejemplo, Ostwald en 1902).
+
+    Se podría objetar que el Postulado 5.3 no es lo suficientemente preciso para definir el concepto de energía. A esto se podría responder, en primer lugar, que la ciencia no proporciona una definición del concepto 
+    general de energía. En segundo lugar, para un físico, el Postulado 5.3 es suficiente para \textit{identificar} $\varepsilon$ como la función de energía, ya que es la única propiedad cuantitativa (y aproximadamente aditiva) que tienen 
+    todas las cosas. (En el caso de las cosas con partes que interactúan, la energía es ligeramente subaditiva). Todo lo que afirma nuestro axioma es que \textit{todas las cosas tienen energía}. No proporciona un método para 
+    calcular la energía de ninguna cosa en particular: esa es una tarea de la ciencia. Y ninguna ciencia puede llevar a cabo esta tarea sin información precisa (o conjeturas) sobre el tipo de cosa, su estructura, sus 
+    interacciones y sus circunstancias.
+
+    Se pueden concebir ciertas propiedades que se presentan en grados infinitos. Por ejemplo, si el universo es infinito en extensión, entonces hay cosas que están infinitamente distantes unas de otras. Por otro lado, la energía de una parte 
+    finita del universo se considera normalmente finita. (Es cierto que tanto en la física clásica como en la cuántica hay teorías que contienen teoremas —nunca axiomas— según los cuales ciertas cosas, como los electrones y las ondas 
+    electromagnéticas planas, tienen energías infinitas. Sin embargo, estas fórmulas se consideran imperfecciones de las teorías, no de la naturaleza, y se recurre a varios trucos para evitarlas). Por lo tanto, estamos justificados al adoptar
+
+    \bigskip
+    \noindent POSTULADO 5.4 La energía de cualquier cosa compuesta por un número finito de cosas, y relativa a cualquier marco de referencia, es finita.
+
+    Una consecuencia importante de la energía finita (o potencial de cambio) de todo lo finito es que el ritmo y el alcance de cada cambio son limitados. (Véase la figura 5.10.) Por ejemplo, la velocidad de un
+    \begin{center}
+        \includegraphics[width=0.6\textwidth]{img/Figura5-10.png}
+        \\ \scriptsize Fig. 5.10. Relación entre la velocidad del proceso y la intensidad (o concentración) de un "factor limitante", como la energía.
+    \end{center}
+
+    El cuerpo no puede superar un límite determinado precisamente porque tiene una cantidad finita de energía. Del mismo modo, los recursos energéticos limitados de la biosfera, en particular del suelo, imponen un 
+    límite a la población humana. (Para más ejemplos y principios, véase Booij y Wolvekamp, 1944). Todas estas afirmaciones concretas relativas a los denominados «factores limitantes» pueden deducirse de fórmulas relativas 
+    a la energía del sistema concreto en cuestión. Las resumimos en
+
+    POSTULADO 5.5 La velocidad y el alcance de todo cambio en cualquier cosa compuesta por un número finito de elementos son limitados.
+
+    (La restricción a las cosas finitas se debe a la necesidad de no excluir la posibilidad de la expansión incesante del universo físico).
+
+    Una consecuencia inmediata del postulado anterior es que todo cambio tiene un final. Pero este tema se tratará en la siguiente sección.
+
+    Antes de cerrar esta sección, debemos evitar un posible malentendido sobre las propiedades universales. A menudo se afirma que la información constituye una propiedad aún más universal que la energía. Sin embargo, no todas 
+    las cosas son sistemas de información: solo aquellas constituidas por una fuente de información, un canal de información y un receptor de información se consideran sistemas de información, es decir, sistemas capaces de generar, 
+    transmitir y recibir información. En segundo lugar, en lugar de ser (en relación con cada marco de referencia) una propiedad intrínseca, como la energía, la información es una propiedad mutua en el sentido de que siempre es una 
+    cantidad de información transmitida por un portador de información: si se cambia el canal (por ejemplo, si se reduce el ruido), la cantidad de información cambiará. Una mirada superficial a los supuestos y definiciones básicos 
+    de la teoría estadística de la información (por ejemplo, Luce, 1960) bastará para corroborar nuestra afirmación. En tercer lugar, aunque puede haber intercambios de energía sin transmisión de información —por ejemplo, en colisiones 
+    atómicas—, toda transmisión de información requiere cierta energía. El hecho de que la teoría de la información no preste atención a la base física de un proceso de información y, por lo tanto, a los intercambios de energía que 
+    subyacen a la transmisión de información, no anula esa base. Volveremos sobre este tema en la sección 4.4.
+    \section{\centering \large PROCESO}
+	\subsection{\textit{Cambio en serie: Tipos}}
+    Hasta ahora hemos estudiado el cambio en general. En esta sección analizaremos un tipo particular de cambio, a saber, el cambio o proceso en serie. No todo conjunto antiguo de estados o acontecimientos constituye un proceso. Por ejemplo, 
+    una colección arbitraria de acontecimientos que ocurren en cosas diferentes que están comparativamente aisladas entre sí no constituye un proceso, aunque esté ordenada en el tiempo. Para que un conjunto de acontecimientos constituya un proceso, 
+    debe satisfacer dos condiciones:
+    \begin{itemize}
+        \item[(i)] los acontecimientos deben implicar o referirse a una sola cosa, por compleja que sea, y   
+        \item[(ii)] the events must be ordered intrinsically.
+    \end{itemize}
+    En resumen, un proceso puede concebirse como un árbol dirigido, en particular una cadena, en algún espacio de eventos.
+
+    Antes de establecer los principios generales, conviene reunir una serie de ejemplos típicos. Recurriremos a estos ejemplos varias veces a lo largo de este trabajo, por lo que es mejor mostrarlos de forma ostensible. 
+
+    \bigskip
+    \noindent(a) \textit{Cadena}
+    \medskip
+
+    \noindent El tipo de proceso más simple es la cadena formada por un conjunto numerable de estados, o de eventos, en una cosa determinada. En este caso particular, podemos formalizar la noción de proceso como una \textit{secuencia}, es decir, una función definida 
+    en el conjunto $\mathbb{N}$ de números naturales. Más precisamente, podemos hacer
+
+    \noindent DEFINICIÓN 5.16 Sea $\mathbb{F}$ una función de estado y $S(x)$ el espacio de estado correspondiente, para una cosa $x$ relativa a un determinado marco de referencia. Entonces, $x$ sufre un proceso en cadena si y solo si $\mathbb{F}:\mathbb{N}\to S(x)$, donde $\mathbb{N}$ 
+    es el conjunto de enteros no negativos. En este caso, el proceso se representa mediante
+
+    \indent\indent$\pi(x) = \langle \text{F}(n) | n \in \mathbb{N} \rangle,$
+    
+    \noindent donde $\mathbb{F}(n)$ es la etapa n-ésima del proceso.
+
+    Un segmento finito de dicho proceso es la restricción de la función de estado a un subconjunto finito de números naturales. La longitud de dicha cadena finita es, por supuesto, el número de etapas que la componen.
+
+    \textit{Ejemplo} A: Una población de partículas inestables, organismos o cualquier otra cosa que aparezca y desaparezca, sufrirá un proceso discontinuo en lo que respecta al número de individuos que la componen. Si la tasa de destrucción se equilibra con la tasa de aparición, se mantendrá un estado estable en ese aspecto.
+
+    Los procesos discontinuos, aunque comunes y de gran importancia heurística, no son universales. E incluso cuando tienen lugar, vale la pena intentar analizarlos más a fondo en lugar de tomar los eventos componentes en bloque, como se ha hecho anteriormente. Esto 
+    no es necesario en las etapas preliminares de una ciencia —por ejemplo, en la teoría del aprendizaje en el momento actual—, pero es un desiderátum último. Por último, dado que los procesos discontinuos no agotan el género de los procesos, no tiene sentido preguntarse 
+    por el número de eventos que han ocurrido durante la historia del universo, ni siquiera durante el último segundo de su existencia.
+
+    \noindent(b) \textit{Proceso continuo}
+    \medskip
+
+    \noindent Se obtiene una generalización obvia de la cadena numerable sustituyendo el conjunto de números naturales de la definición anterior por un conjunto dirigido arbitrario. Más exactamente, proponemos
+    
+    \noindent DEFINICIÓN 5.17 Sea $\mathbb{F}$ una función de estado y $S(x)$ el espacio de estado correspondiente, para una cosa $x$ relativa a un determinado marco de referencia. Entonces, $x$ sufre un cambio en 
+    serie si y solo si $\mathbb{F}:T \to S(x)$, donde $T$ es un conjunto dirigido [es decir, si $\mathbb{F}$ es una red]. En este caso, el proceso se representa mediante
+
+    \indent\indent$\pi(x) = \langle \text{F}(t) | t \in T \rangle.$
+
+    Los cambios en serie suelen ser continuos o sin interrupciones, como cuando la función de estado es una función continua de un parámetro como el tiempo. Por lo tanto, necesitamos
+
+    DEFINICIÓN 5.18 Sea $\pi(x) = \langle \text{F}(t) | t \in T \rangle.$ un cambio en serie en una cosa $x$. Entonces, $\pi(x)$ es continuo en el intervalo $U \subseteq T$ si y solo si $U$ es no numerable y $\mathbb{F}$ es una función continua en $U$. Y el proceso es continuo por partes en $T$ si y solo si $T$ es igual a la unión de un 
+    número finito de conjuntos no numerables, y $\mathbb{F}$ es continuo en cada uno de ellos.
+
+    \textit{Ejemplo 1} Una reacción química reversible
+
+    \indent\indent\indent $A \xrightleftharpoons[k_-]{k_+} B$
+
+    \noindent en un reactor cerrado se describe mediante ecuaciones de velocidad con coeficientes positivos.
+
+    
 \end{justifying}
