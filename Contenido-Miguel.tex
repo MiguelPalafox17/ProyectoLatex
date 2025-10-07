@@ -262,7 +262,27 @@
 
     \indent\indent\indent $A \xrightleftharpoons[k_-]{k_+} B$
 
-    \noindent en un reactor cerrado se describe mediante ecuaciones de velocidad con coeficientes positivos.
+    \noindent en un reactor cerrado se describe mediante ecuaciones de velocidad con coeficientes positivos
 
-    
+    \[\frac{dA}{dt} = -k_+A + k_-B, \quad \frac{dB}{dt} = k_+A - k_-B\]
+
+    \noindent sujeto a la condición de cierre o conservación $d(A+B)/dt=0$. El espacio de estados del conjunto es el plano $\mathbb{R}^+ \times \mathbb{R}^+$ y la evolución del sistema se representa mediante un arco de una curva continua en este plano. \textit{Ejemplo 2} La trayectoria de una partícula que colisiona con otras partículas es 
+    discontinua pero continua, aunque la velocidad de la partícula cambie bruscamente en cada colisión. El caso más simple es aquel en el que la partícula está inicialmente en reposo y obtiene una velocidad constante en $t=0$ al ser empujada por otra partícula:
+    \[
+        \dot{x}(t) = 
+        \begin{cases} 
+        0 & \text{para } t < 0 \\
+        1 & \text{para } t \ge 0 
+        \end{cases}
+        \qquad
+        \begin{array}{l}
+        \therefore x(t) = a = \text{constante} \\
+        \\
+        \therefore x(t) = a + t.
+        \end{array}
+    \]
+    A veces se afirma que la continuidad es más básica que la discontinuidad, y otras veces se afirma lo contrario. No parece haber una base sólida para ninguna de las dos hipótesis, por lo que no adoptaremos ninguna de ellas. Solo sabemos que (a) ambas hipótesis han sido estimulantes desde el punto de vista ontológico y científico; (b) las hipótesis de continuidad son empíricamente irrefutables o casi, y (c) mientras que algunas propiedades (y, por lo tanto, algunos procesos) son continuas, otras no lo son, al menos según la ciencia contemporánea. Por estas razones, en lugar de comprometernos con ninguna de las dos hipótesis, proponemos la heurística más fértil
+
+    \medskip
+    \noindent PRINCIPIO 5.4 Intenta resolver cada cambio discontinuo en un proceso continuo y busca discontinuidades en cada proceso aparentemente continuo.
 \end{justifying}
