@@ -376,18 +376,64 @@
 	Esto, a su vez, implica que cada morfismo en la categoría es un isomorfismo,
 	es decir, el inverso de $(s, s')$ es el morfismo único $(s', s)$. Esto implica
 
-	\smallskip
+	\bigskip
 
-	\noindent COROLARIO 5.4 Sean $s, s' \in S(x)$ estados de $x$. Entonces
-	\begin{enumerate}[label=(\roman*), itemsep=0pt, parsep=0pt]
-		\item existe un evento único $e \in E(x)$ que representa el cambio de $s$ a $s'$, a saber, $e = \langle s, s' \rangle$;
-		\item el evento $e$ tiene un inverso único $e^{-1} = \langle s', s \rangle$ que representa el cambio de $s'$ a $s$;
-		\item si $s = s'$, entonces $e = e^{-1} = i_s$ es el evento de identidad en $s$.
-	\end{enumerate}
+    \noindent COROLARIO 5.4 Sean $s, s' \in S(x)$ estados de $x$. Entonces
+    \begin{itemize}
+        \item[(i)] ningun evento que no sea un evento de identidad es inmediatamente repetible: $(s, s') * (s, s')$ no est\'a definido en $E(x)$;
+        \item[(ii)] Si un evento es seguido por su inverso, entonces no se produce ningún cambio neto: $ \langle s, s' \rangle * \langle s', s \rangle = \langle s, s \rangle. $
+    \end{itemize}
+
+    De la Definición 5.4 se desprende que los estados 
+    intermedios no aparecen en el resultado neto. Por lo tanto, los dos procesos
+    \bigskip
+    \begin{center}
+        \begin{tikzpicture}[
+            node distance=1.5cm and 2cm,
+            every node/.style={circle, draw, minimum size=3mm, inner sep=2pt},
+            every edge/.style={draw, -{Stealth[length=2mm]}},
+        ]
+            % Colocar los nodos
+            \node (a) {a};
+            \node (s) [above right=of a] {s};
+            \node (t) [below right=of a] {t};
+            \node (b) [below right=of s] {b};
+
+            % Dibujar las flechas (aristas)
+            \path (a) edge (s);
+            \path (s) edge (b);
+            \path (a) edge (t);
+            \path (t) edge (b);
+        \end{tikzpicture}
+    \end{center}
+    \bigskip
+
+    \noindent son equivalentes en que $\langle a, s \rangle * \langle s, b \rangle = \langle a, t \rangle * \langle t, b \rangle = \langle a, b \rangle$. Por lo tanto, podemos hacer
+
+    \bigskip
+
+    \noindent DEFINICIÓN 5.5 Dos eventos complejos (procesos) en un espacio de eventos dado son equivalentes si tienen el mismo resultado [es decir, si relacionan los mismos estados inicial y final].
+    Por lo tanto, cada evento complejo puede interpretarse como una clase de equivalencia de procesos, es decir, el conjunto de todos los procesos con los mismos puntos finales (estados).
+    Concluimos esta sección destacando dos nociones que han surgido tácitamente en la sección anterior y que serán de capital importancia en la siguiente: las de proceso y precedencia.
+    DEFINICIÓN 5.6 Un evento complejo [es decir, uno formado por la composición de dos o más eventos] se denomina proceso.
+
+    \bigskip
+
+    \noindent DEFINICIÓN 5.7 Sea $(e)$ y $(e')$ dos eventos en un espacio de eventos dado (es decir, $(e,e')\in E(x)$ para algún elemento $(x)$), tales que $(e)$ y $(e')$ se componen para formar un tercer evento $(e'') = (e)\ast (e')$. 
+    Entonces se dice que $(e)$ precede a $(e')$ con respecto al marco de referencia involucrado en $(E(x))$. Formalmente,
+    \[
+    \text{Si } e,e'\in E(x)\quad\text{entonces}\quad
+    e\prec e'\overset{\mathrm{df}}{=} e\ast e'\in E(x).
+    \]
+
+    Por lo tanto, para que un evento se repita, la cosa debe primero regresar al estado inicial, ya sea a través del 
+    evento converso (cuando sea posible) o a través de eventos intermedios, como en el caso de $\langle s, s' \rangle * \langle s', s'' \rangle * \langle s'', s \rangle = \langle s, s \rangle$. 
+    De la Definición 5.4 se sigue que los estados intermedios no aparecen en el resultado neto. Así, los dos procesos
+
 
   \bigskip
 
-  Seguir aqui Palafox
+
 
     Esta relación de precedencia es irreflexiva porque ningún evento propio se compone consigo mismo; es asimétrica: si dos eventos se componen en un orden dado, no se deduce que también se compongan en el orden inverso; y es transitiva: si un evento se compone con otro, y este último con un tercer evento, entonces el primero se compone con el último. En resumen, < es un orden parcial estricto de E(x) para cualquier cosa x. (La precedencia es entonces formalmente igual a < en un conjunto de números y a c en un conjunto de conjuntos). En resumen, tenemos
     
